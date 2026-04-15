@@ -5,13 +5,180 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meeting Minutes</title>
+    <link rel="icon" href="favicon.ico">
     
 </head>
 
-    <body>
+<body>
 
+    <header> 
+   
         <h1>Meeting minutes</h1>
 
-    </body>
+        <h2>Brainstorming</h2>
+
+        <h3>Date: 4/14/26</h3>
+
+        <nav>
+            <div><a href="#attendance_list">Attendance List</a><br></div>
+            <div><a href="#agenda">Agenda</a><br></div>
+            <div><a href="#unfinished_business">Unfinished Business</a><br></div>
+            <div><a href="#new_business">New Business</a><br></div>
+            <div><a href="#comments">Comments</a><br></div>
+            <div><a href="#Miscellaneous">Miscellaneous</a><br></div>
+            <div><a href="#images">Images</a><br></div>
+            <div><a href="#video">Video Recording</a><br></div>
+            <div><a href="#audio">Audio Recording</a><br></div>
+        </nav>
+
+    <header>
+
+    <main>
+
+        <section id="attendance_list">
+
+            <h2>Attendance List:</h2>
+
+            <ul>
+                <li>Sean Zemlyak</li>
+                <li>Bob</li>
+                <li>Jim</li>
+            </ul>
+
+        </section>
+
+        <hr>
+
+        <section id="agenda">
+            <h2>Agenda:</h2>
+
+            <ol>
+                <li><b>Discuss project timeline</b></li>
+                <li><b>Assign tasks</b></li>
+                <li><b>Set next meeting date</b></li>
+            </ol>
+
+        </section>
+
+        <hr>
+
+        <section id="unfinished_business">
+            <h2>Unfinished Business:</h2>
+            
+            <p><em>Everything on the agenda that we didnt talk about</em></p>
+
+        </section>
+
+        <hr>
+
+        <section id="new_business">
+            <h2>New Business:</h2>
+            
+            <p><i>Any new topics to be discussed</i></p>
+            
+        </section>
+
+        <hr>
+
+        <section id="comments">
+            <h2>Comments:</h2>
+            
+            <p><strong>Any additional comments or notes</strong></p>
+            
+        </section>
+
+        <section id="Miscellaneous">
+            <h2>Miscellaneous:</h2>
+            
+            <p>Our Github: <a href="https://github.com/cse110-sp26-group22/cse110-sp26-group22" target="_blank">https://github.com/cse110-sp26-group22/cse110-sp26-group22</a></p>
+            
+        </section>
+
+        <section id="images">
+            <h2>Images:</h2>
+            
+            <p>Images from meeting:<br>
+            <img src="images.png" alt="SWE meeting diagram">
+            <img src="whiteboard.jpg" alt="Whiteboard notes from meeting">
+
+            </p>
+            
+        </section>
+
+        <section id="video">
+            <h2>Video Recording:</h2>
+            
+            <video controls>
+                <source src="Meeting_Minutes.mp4" type="video/mp4" width="800" height="600">
+                Your browser does not support the video tag.
+            </video>
+            
+        </section>
+        
+        <section id="audio">
+            <h2>Audio Recording:</h2>
+            
+            <audio src="audio.mp3" controls>
+                Your browser does not support the audio element.
+            </audio>
+
+        </section>
+        <hr>
+
+        <section id="feedback_form">
+            <h2>Meeting Feedback Form</h2>
+            <form action="#" method="get">
+                <fieldset>
+                    <legend>Tell us how the meeting went</legend>
+
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name"><br><br>
+
+                    <label for="meeting_date">Confirm Meeting Date:</label>
+                    <input type="date" id="meeting_date" name="meeting_date"><br><br>
+
+                    <label for="department">Your Department:</label>
+                    <input list="departments" name="department" id="department">
+                    <datalist id="departments">
+                        <option value="Engineering">
+                        <option value="Design">
+                        <option value="Marketing">
+                        <option value="Human Resources">
+                    </datalist><br><br>
+
+                    <label for="rating">Meeting Rating:</label>
+                    <select name="rating" id="rating">
+                        <option value="excellent">Excellent</option>
+                        <option value="good">Good</option>
+                        <option value="average">Average</option>
+                        <option value="poor">Poor</option>
+                    </select><br><br>
+
+                    <p>Was the agenda followed?</p>
+                    <input type="radio" id="yes_agenda" name="followed_agenda" value="yes">
+                    <label for="yes_agenda">Yes</label><br>
+                    <input type="radio" id="no_agenda" name="followed_agenda" value="no">
+                    <label for="no_agenda">No</label><br><br>
+
+                    <input type="checkbox" id="subscribe" name="subscribe" value="yes">
+                    <label for="subscribe">Subscribe to future meeting agendas</label><br><br>
+
+                    <label for="feedback">Additional Feedback:</label><br>
+                    <textarea id="feedback" name="feedback" rows="4" cols="40" placeholder="Type your thoughts here..."></textarea><br><br>
+
+                    <button type="submit">Submit Feedback</button>
+                </fieldset>
+            </form>
+        </section>
+
+    <main>
+
+    <hr>
+
+    <footer>
+        <p>Created by Sean Zemlyak</p>
+    </footer>
+
+</body>
 
 </html>
