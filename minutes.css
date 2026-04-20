@@ -1,7 +1,23 @@
-/*Variables and Fallbacks*/
+
+/* Variables & Fallbacks*/
 :root {
     --primary-bg: #fdfdfd;
     --accent-color: hsl(210, 80%, 50%);
+}
+
+/*Universal Selector*/
+* {
+    box-sizing: border-box;
+}
+
+/*Element Selector and Typography*/
+body {
+
+    background-color: var(--primary-bg, #ffffff);
+    
+    font-family: 'Montserrat', sans-serif;
+    
+    margin: auto;
 }
 
 /*Colors*/
@@ -14,12 +30,12 @@ h3 {
 }
 
 p {
-    
+
     color: color(display-p3 0.2 0.2 0.2); 
 }
 
 strong {
-    
+
     color: color-mix(in srgb, black 60%, blue);
 }
 
@@ -38,11 +54,39 @@ main {
     display: block; 
 }
 
+/*Class Selector*/
+.card {
+
+    margin-top: 1cm;
+    margin-right: 5%; 
+    margin-bottom: 20pt;
+    margin-left: 5%;
+    
+    padding: 10px 1.5rem;
+    
+    border: 2px solid var(--accent-color);
+}
+
+/* ID Selector */
+#unfinished_business {
+
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    
+    border-width: 2px;
+    border-style: dashed;
+    border-color: #ccc;
+    border-radius: 8px;
+}
+
+
 /*Position & Display Variants*/
 header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    position: static;
+    display: block;
+
 }
 
 img {
@@ -51,24 +95,102 @@ img {
 }
 
 hr {
-    display: none;
+    display: block;
 }
 
 /*Flexbox*/
 nav {
     display: flex;
-    justify-content: center; /* Flex Attr 1 */
-    align-items: center;     /* Flex Attr 2 */
-    flex-wrap: wrap;         /* Flex Attr 3 */
+    justify-content: center;
+    align-items: center;    
+    flex-wrap: wrap;         
     gap: 15px;
     padding: 10px;
     background-color: #eee;
 }
 
-/* Grid (Applied to the attendance list which has 3 <li> children) */
+/*Grid*/
 #attendance_list ul {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Grid Attr 1 */
-    gap: 10px;                             /* Grid Attr 2 */
-    justify-items: start;                  /* Grid Attr 3 */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px;                             
+    justify-items: start;                  
+}
+
+/*Attribute Selector*/
+input[type="text"] {
+    width: 100%;
+    padding: 5px;
+}
+
+/*Pseudo-class Selectors*/
+button:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+a:active {
+    color: red;
+}
+
+/*Selector List*/
+h1, h2, h3 {
+    margin-bottom: 5px;
+}
+
+/*Descendant Combinator*/
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*Child Combinator*/
+nav > div {
+    padding: 5px;
+}
+
+/*General Sibling Combinator*/
+h2 ~ p {
+    line-height: 1.6;
+}
+
+/*Adjacent Sibling Combinator*/
+h2 + ul {
+    list-style-type: square;
+}
+
+/*Combining Two Selectors*/
+section.card {
+    background-color: #f9f9ff;
+}
+
+/*:has() Selector*/
+section:has(form) {
+    border: 3px solid red;
+    padding: 10px;
+}
+
+/*Nested Selectors*/
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+
+    & p {
+        text-align: center;
+        margin: 0;
+    }
+}
+
+/*Responsives*/
+
+@media (max-width: 600px) {
+
+    #attendance_list ul {
+        grid-template-columns: 1fr;
+    }
+    
+    nav {
+        flex-direction: column;
+    }
 }
