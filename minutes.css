@@ -1,0 +1,74 @@
+/*Variables and Fallbacks*/
+:root {
+    --primary-bg: #fdfdfd;
+    --accent-color: hsl(210, 80%, 50%);
+}
+
+/*Colors*/
+h2 {
+    color: rgb(44, 62, 80);
+}
+
+h3 {
+    color: rgba(44, 62, 80, 0.7);
+}
+
+p {
+    
+    color: color(display-p3 0.2 0.2 0.2); 
+}
+
+strong {
+    
+    color: color-mix(in srgb, black 60%, blue);
+}
+
+
+/*Box Model, Units, & Sizing*/
+
+main {
+
+    width: 90%;
+    max-width: 900px;
+    min-width: 320px;
+    min-height: 50vh;
+    
+    margin: 20px auto;
+    
+    display: block; 
+}
+
+/*Position & Display Variants*/
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+img {
+    display: inline-block;
+    position: relative;
+}
+
+hr {
+    display: none;
+}
+
+/*Flexbox*/
+nav {
+    display: flex;
+    justify-content: center; /* Flex Attr 1 */
+    align-items: center;     /* Flex Attr 2 */
+    flex-wrap: wrap;         /* Flex Attr 3 */
+    gap: 15px;
+    padding: 10px;
+    background-color: #eee;
+}
+
+/* Grid (Applied to the attendance list which has 3 <li> children) */
+#attendance_list ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Grid Attr 1 */
+    gap: 10px;                             /* Grid Attr 2 */
+    justify-items: start;                  /* Grid Attr 3 */
+}
